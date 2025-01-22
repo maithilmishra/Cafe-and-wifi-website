@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>List of Cafes</h2>
+<ul>
+    {% for cafe in cafes %}
+    <li>{{ cafe['name'] }} - {{ cafe['location'] }}
+        <a href="{{ url_for('delete_cafe', id=cafe['id']) }}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

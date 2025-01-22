@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add a New Cafe</h2>
+<form method="post">
+    <label for="name">Cafe Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+    
+    <button type="submit">Add Cafe</button>
+</form>
+{% endblock %}
